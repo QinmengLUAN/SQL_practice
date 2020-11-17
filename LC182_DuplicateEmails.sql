@@ -25,3 +25,7 @@ For example, your query should return the following for the above table:
 SELECT Email FROM Person
 GROUP BY Email
 HAVING COUNT(*) > 1
+
+SELECT DISTINCT a.Email FROM Person AS a 
+JOIN Person AS b ON a.Email = b.Email
+AND a.Id <> b.Id
