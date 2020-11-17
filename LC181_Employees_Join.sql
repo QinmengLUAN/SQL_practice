@@ -27,3 +27,8 @@ Select emp.Name AS Employee from
 Employee emp inner join Employee manager
 on emp.ManagerId = manager.Id
 where emp.Salary > manager.Salary
+
+# Methon 2
+SELECT A.Name AS Employee FROM Employee AS A
+INNER JOIN Employee AS B on A.ManagerId = B.Id
+WHERE A.Salary > B.Salary
